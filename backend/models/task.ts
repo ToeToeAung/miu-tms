@@ -29,6 +29,10 @@ export default class Task {
       static getAllTasks(): Task[] {
         return tasks; 
       }
+
+      // static deleteTaskById(id : string){
+
+      // }
 }
 
 

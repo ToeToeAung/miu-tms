@@ -1,0 +1,14 @@
+###
+GET http://localhost:3002/tasks
+
+###
+POST http://localhost:3002/tasks
+Content-Type: application/json
+
+{
+    "id": "",
+    "content": "New Task 2",
+    "completed": false,
+    "poistion" : 2,
+    "priority" : "medium"
+}
