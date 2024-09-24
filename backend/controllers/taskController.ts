@@ -10,9 +10,13 @@ export const createTask = (req: Request, res: Response, next: NextFunction) => {
   });
 }
 
-
 export const getAllTasks = (req: Request, res: Response, next: NextFunction) => {
   console.log('GET /tasks called');
   res.status(200).json({ success: true, data : Task.getAllTasks() });
+};
+
+export const deleteTaskById = (req: Request, res: Response, next: NextFunction) => {
+  console.log('GET /tasks delete called');
+  res.status(200).json({ success: true, data : Task.deleteTaskById(req.params.id) });
 };
 

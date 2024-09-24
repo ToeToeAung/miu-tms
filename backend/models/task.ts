@@ -30,9 +30,15 @@ export default class Task {
         return tasks; 
       }
 
-      // static deleteTaskById(id : string){
-
-      // }
+      static deleteTaskById(taskId : string){
+        const taskIndex = tasks.findIndex(t=> t.id === taskId);
+        if(taskIndex){
+          tasks.splice(taskIndex,1);
+        }else{
+          throw new Error(`There is no task with task name ${taskId}`)
+        }
+        return tasks;
+      }
 }
 
 
